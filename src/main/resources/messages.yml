@@ -1,0 +1,28 @@
+prefix: "&8[&6Ancient Relics&8] &r"
+
+general:
+  no-permission: "&cYou do not have permission to do that."
+  player-only: "&cOnly players can use this command."
+  unknown-command: "&cUnknown subcommand. Use /relic help."
+  reload-success: "&aConfiguration reloaded successfully."
+  invalid-relic: "&cThat relic does not exist."
+  invalid-player: "&cThat player could not be found."
+
+relic:
+  bound: "&aYou have bound to the %relic%!"
+  already-owner: "&cYou already own a relic. You cannot own more than one."
+  target-already-owner: "&cThat player already owns a relic."
+  no-relic: "&cYou do not currently own a relic."
+  new-owner-broadcast: "&6The %relic% has chosen a new owner: &e%player%&6!"
+  dropped: "&e%relic% &7has dropped on the ground at your death location."
+  despawned-broadcast: "&7The %relic% has vanished, unclaimed."
+  respawned-broadcast: "&aThe %relic% &7has reappeared in the world!"
+  given: "&aGave %relic% to %player%."
+  removed: "&aRemoved %relic% from its owner."
+  reset: "&aReset %relic% to unowned state."
+  respawned: "&aRespawned %relic%."
+  teleported: "&aTeleported to %relic%."
+  not-owned: "&cThat relic is not currently owned by anyone."
+
+gui:
+  no-relic-owned: "&7You do not own a relic yet."

@@ -1,0 +1,5 @@
+# This file is automatically managed by AncientRelics.
+# It stores player <-> relic ownership data, relic states,
+# kill/death counters, and drop locations.
+players: {}
+relic-states: {}
