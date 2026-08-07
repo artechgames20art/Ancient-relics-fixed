@@ -1,0 +1,42 @@
+name: Build AncientRelics
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Verify Project
+        run: |
+          echo "Current Directory:"
+          pwd
+          echo "Project Files:"
+          ls -la
+          echo "Searching for pom.xml..."
+          find . -name "pom.xml"
+
+      - name: Build Plugin
+        run: mvn clean package -f pom.xml
+
+      - name: Upload Plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: AncientRelics
+          path: target/*.jar
