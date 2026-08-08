@@ -44,3 +44,9 @@ sounds:
 
 cooldowns:
   ability-default-seconds: 5
+
+
+season:
+  first-relic-title: "&6&lAN ANCIENT POWER AWAKENS"
+  first-relic-subtitle: "&7Ancient stone sleeps where &bwater meets the land&7..."
+  first-relic-chat: "&6&lAncient Relics &8» &7A mysterious presence has awakened..."

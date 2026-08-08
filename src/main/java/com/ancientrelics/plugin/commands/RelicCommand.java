@@ -45,9 +45,27 @@ public class RelicCommand implements CommandExecutor {
             case "owner" -> handleOwner(sender, args);
             case "help" -> handleHelp(sender);
             case "admin" -> adminSubCommand.handle(sender, args);
+            case "start" -> handleStart(sender);
+            case "stop" -> handleStop(sender);
             default -> plugin.getMessageManager().send(sender, "general.unknown-command");
         }
         return true;
+    }
+
+    private void handleStart(CommandSender sender) {
+        if (!sender.hasPermission("ancientrelics.admin")) {
+            plugin.getMessageManager().send(sender, "general.no-permission");
+            return;
+        }
+        plugin.getSeasonManager().start(sender);
+    }
+
+    private void handleStop(CommandSender sender) {
+        if (!sender.hasPermission("ancientrelics.admin")) {
+            plugin.getMessageManager().send(sender, "general.no-permission");
+            return;
+        }
+        plugin.getSeasonManager().stop(sender);
     }
 
     private void handleInfo(CommandSender sender, String[] args) {
@@ -110,6 +128,8 @@ public class RelicCommand implements CommandExecutor {
         sender.sendMessage(ColorUtil.color("&e/relic list &7- List all relics"));
         sender.sendMessage(ColorUtil.color("&e/relic owner <relic> &7- Show a relic's owner"));
         if (sender.hasPermission("ancientrelics.admin")) {
+            sender.sendMessage(ColorUtil.color("&c/relic start &7- Start the relic season"));
+            sender.sendMessage(ColorUtil.color("&c/relic stop &7- Stop the relic season"));
             sender.sendMessage(ColorUtil.color("&c/relic admin give|remove|reset|respawn|reload|tp"));
         }
     }

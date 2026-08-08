@@ -8,7 +8,7 @@ description: A complete Ancient Relics SMP plugin.
 commands:
   relic:
     description: Main Ancient Relics command.
-    usage: /relic [info|list|owner|help|admin]
+    usage: /relic [info|list|owner|help|start|stop|admin]
     permission: ancientrelics.use
     permission-message: You do not have permission to use this command.
 

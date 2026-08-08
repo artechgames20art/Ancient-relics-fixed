@@ -43,6 +43,7 @@ public final class AncientRelicsPlugin extends JavaPlugin {
     private ParticleManager particleManager;
     private AbilityManager abilityManager;
     private GuiManager guiManager;
+    private SeasonManager seasonManager;
 
     @Override
     public void onEnable() {
@@ -61,6 +62,7 @@ public final class AncientRelicsPlugin extends JavaPlugin {
         this.relicAdminService = new RelicAdminService(this);
         this.soundManager = new SoundManager(this);
         this.guiManager = new GuiManager(this);
+        this.seasonManager = new SeasonManager(this);
 
         this.particleManager = new ParticleManager(this);
         this.particleManager.start();
@@ -82,6 +84,9 @@ public final class AncientRelicsPlugin extends JavaPlugin {
         }
         if (abilityManager != null) {
             abilityManager.stop();
+        }
+        if (seasonManager != null) {
+            seasonManager.shutdown();
         }
         if (relicManager != null) {
             relicManager.saveAll();
@@ -157,5 +162,9 @@ public final class AncientRelicsPlugin extends JavaPlugin {
 
     public GuiManager getGuiManager() {
         return guiManager;
+    }
+
+    public SeasonManager getSeasonManager() {
+        return seasonManager;
     }
 }

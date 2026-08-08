@@ -18,7 +18,7 @@ public class RelicTabCompleter implements TabCompleter {
 
     private final AncientRelicsPlugin plugin;
 
-    private static final List<String> ROOT = List.of("info", "list", "owner", "help", "admin");
+    private static final List<String> ROOT = List.of("info", "list", "owner", "help", "start", "stop", "admin");
     private static final List<String> ADMIN_ACTIONS = List.of(
             "give", "remove", "respawn", "reload", "reset", "tp", "debug");
 
