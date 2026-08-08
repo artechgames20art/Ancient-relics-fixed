@@ -57,7 +57,7 @@ public class RelicCommand implements CommandExecutor {
             plugin.getMessageManager().send(sender, "general.no-permission");
             return;
         }
-        plugin.getSeasonManager().start(sender);
+        plugin.getSeasonManager().startSeason(sender);
     }
 
     private void handleStop(CommandSender sender) {
@@ -65,7 +65,7 @@ public class RelicCommand implements CommandExecutor {
             plugin.getMessageManager().send(sender, "general.no-permission");
             return;
         }
-        plugin.getSeasonManager().stop(sender);
+        plugin.getSeasonManager().stopSeason(sender);
     }
 
     private void handleInfo(CommandSender sender, String[] args) {
@@ -128,9 +128,8 @@ public class RelicCommand implements CommandExecutor {
         sender.sendMessage(ColorUtil.color("&e/relic list &7- List all relics"));
         sender.sendMessage(ColorUtil.color("&e/relic owner <relic> &7- Show a relic's owner"));
         if (sender.hasPermission("ancientrelics.admin")) {
-            sender.sendMessage(ColorUtil.color("&c/relic start &7- Start the relic season"));
-            sender.sendMessage(ColorUtil.color("&c/relic stop &7- Stop the relic season"));
-            sender.sendMessage(ColorUtil.color("&c/relic admin give|remove|reset|respawn|reload|tp"));
+            sender.sendMessage(ColorUtil.color("&e/relic start|stop &7- Start/stop the relic season
+            &c/relic admin give|remove|reset|respawn|reload|tp"));
         }
     }
 }

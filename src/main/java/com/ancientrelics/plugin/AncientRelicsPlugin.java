@@ -22,6 +22,7 @@ import com.ancientrelics.plugin.managers.ParticleManager;
 import com.ancientrelics.plugin.managers.RelicAdminService;
 import com.ancientrelics.plugin.managers.RelicManager;
 import com.ancientrelics.plugin.managers.SoundManager;
+import com.ancientrelics.plugin.managers.SeasonManager;
 import com.ancientrelics.plugin.relics.RelicRegistry;
 import com.ancientrelics.plugin.utils.RelicKeys;
 import org.bukkit.plugin.java.JavaPlugin;
