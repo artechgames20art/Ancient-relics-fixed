@@ -1,0 +1,46 @@
+# =========================================
+#           AncientRelics Config
+# =========================================
+
+settings:
+  particle-task-period-ticks: 20
+  particle-task-radius: 0
+  ability-check-period-ticks: 20
+  save-interval-minutes: 5
+  debug: false
+
+drop:
+  # Time in seconds a dropped relic item will stay before despawning if unclaimed.
+  despawn-seconds: 300
+  # Time in seconds before a despawned relic automatically respawns somewhere.
+  respawn-delay-seconds: 600
+  glow: true
+  prevent-burn: true
+  prevent-explosion: true
+
+broadcast:
+  new-owner: true
+  despawned: true
+  respawned: true
+
+gui:
+  inventory-size: 54
+  titles:
+    home: "&8&lAncient Relics"
+    my-relic: "&8&lMy Relic"
+    all-relics: "&8&lAll Relics"
+    owners: "&8&lRelic Owners"
+    information: "&8&lInformation"
+    settings: "&8&lSettings"
+    admin: "&8&lRelic Admin Panel"
+
+sounds:
+  pickup: ENTITY_PLAYER_LEVELUP
+  equip: ITEM_ARMOR_EQUIP_GENERIC
+  drop: ENTITY_ITEM_PICKUP
+  ability: ENTITY_ENDER_DRAGON_FLAP
+  levelup: ENTITY_PLAYER_LEVELUP
+  broadcast: ENTITY_WITHER_SPAWN
+
+cooldowns:
+  ability-default-seconds: 5

@@ -1,0 +1,39 @@
+name: AncientRelics
+version: '${project.version}'
+main: com.ancientrelics.plugin.AncientRelicsPlugin
+api-version: '1.20'
+author: AncientRelicsTeam
+description: A complete Ancient Relics SMP plugin.
+
+commands:
+  relic:
+    description: Main Ancient Relics command.
+    usage: /relic [info|list|owner|help|admin]
+    permission: ancientrelics.use
+    permission-message: You do not have permission to use this command.
+
+permissions:
+  ancientrelics.use:
+    description: Allows use of base relic commands.
+    default: true
+  ancientrelics.admin:
+    description: Allows use of admin relic commands.
+    default: op
+  ancientrelics.admin.give:
+    description: Allows giving relics.
+    default: op
+  ancientrelics.admin.remove:
+    description: Allows removing relics.
+    default: op
+  ancientrelics.admin.reset:
+    description: Allows resetting relics.
+    default: op
+  ancientrelics.admin.respawn:
+    description: Allows respawning relics.
+    default: op
+  ancientrelics.admin.reload:
+    description: Allows reloading the config.
+    default: op
+  ancientrelics.admin.tp:
+    description: Allows teleporting to relics.
+    default: op

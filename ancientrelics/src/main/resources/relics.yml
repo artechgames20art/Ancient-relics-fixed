@@ -1,0 +1,106 @@
+# =========================================
+#     Ancient Relics Definitions
+# =========================================
+# Adding a new relic:
+#   1. Create a Relic implementation class in relics/impl
+#   2. Create an Ability implementation class in abilities/impl
+#   3. Register both in RelicRegistry
+#   4. Add an entry below
+# No other core code needs to change.
+
+relics:
+  fire_relic:
+    name: "&c&lFire Relic"
+    lore:
+      - "&7A relic forged in the heart"
+      - "&7of an ancient volcano."
+    rarity: LEGENDARY
+    material: BLAZE_ROD
+    particle: FLAME
+    sound: ENTITY_BLAZE_SHOOT
+    ability-class: FireAbility
+    description: "&7Grants fire resistance, lava immunity, and burning strikes."
+
+  water_relic:
+    name: "&b&lWater Relic"
+    lore:
+      - "&7Blessed by the depths"
+      - "&7of the endless ocean."
+    rarity: LEGENDARY
+    material: HEART_OF_THE_SEA
+    particle: BUBBLE_COLUMN_UP
+    sound: ENTITY_DOLPHIN_SPLASH
+    ability-class: WaterAbility
+    description: "&7Grants water breathing, faster swimming, and dolphin's grace."
+
+  earth_relic:
+    name: "&2&lEarth Relic"
+    lore:
+      - "&7Carved from the roots"
+      - "&7of the world itself."
+    rarity: EPIC
+    material: EMERALD
+    particle: HAPPY_VILLAGER
+    sound: BLOCK_STONE_BREAK
+    ability-class: EarthAbility
+    description: "&7Grants extra health, knockback resistance, and faster mining."
+
+  wind_relic:
+    name: "&f&lWind Relic"
+    lore:
+      - "&7Light as a whisper,"
+      - "&7fast as a storm."
+    rarity: EPIC
+    material: FEATHER
+    particle: CLOUD
+    sound: ENTITY_PHANTOM_FLAP
+    ability-class: WindAbility
+    description: "&7Grants double jump, slow falling, and bonus speed."
+
+  shadow_relic:
+    name: "&8&lShadow Relic"
+    lore:
+      - "&7Born from the void"
+      - "&7between worlds."
+    rarity: EPIC
+    material: WITHER_ROSE
+    particle: SMOKE
+    sound: ENTITY_ENDERMAN_TELEPORT
+    ability-class: ShadowAbility
+    description: "&7Grants night vision, mob evasion while sneaking, and night speed."
+
+  storm_relic:
+    name: "&e&lStorm Relic"
+    lore:
+      - "&7Crackling with the fury"
+      - "&7of a thousand lightning bolts."
+    rarity: LEGENDARY
+    material: TRIDENT
+    particle: ELECTRIC_SPARK
+    sound: ENTITY_LIGHTNING_BOLT_THUNDER
+    ability-class: StormAbility
+    description: "&7Grants lightning immunity, and strength/speed in storms."
+
+  frost_relic:
+    name: "&b&lFrost Relic"
+    lore:
+      - "&7Frozen since the dawn"
+      - "&7of the first winter."
+    rarity: EPIC
+    material: BLUE_ICE
+    particle: SNOWFLAKE
+    sound: BLOCK_GLASS_BREAK
+    ability-class: FrostAbility
+    description: "&7Grants enemy freezing and temporary ice walking."
+
+  light_relic:
+    name: "&e&lLight Relic"
+    lore:
+      - "&7A shard of the first"
+      - "&7sunrise."
+    rarity: LEGENDARY
+    material: NETHER_STAR
+    particle: END_ROD
+    sound: ENTITY_PLAYER_LEVELUP
+    ability-class: LightAbility
+    description: "&7Grants regeneration, undead-slaying power, and glowing sight."
